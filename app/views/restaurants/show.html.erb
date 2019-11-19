@@ -3,9 +3,12 @@
 <h4 ><%= @restaurant.name %><br /> <br /> <%=@restaurant.specials%></h4>
 
 <br />
+<%= link_to 'View comments', restaurant_reviews_path(@restaurant) %>
 
 <%= link_to "Back", :back %>
 
+<%= link_to 'Add Comment', new_restaurant_review_path(@restaurant) %>
+
  <%= link_to 'Edit Restaurant', edit_restaurant_path(@restaurant) %>
 
-  <%= link_to 'Delete Restaurant', @restaurant, method: :delete %><
+  <%= link_to 'Delete Restaurant', @restaurant, method: :delete %>

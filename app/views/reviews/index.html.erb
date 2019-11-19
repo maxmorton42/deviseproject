@@ -1,0 +1,7 @@
+<br />
+<br />
+
+<% @reviews.each do |review| %>
+  <ul>
+  <li><%= link_to review.comment, [@restaurant, review] %></li>
+<% end %> 
