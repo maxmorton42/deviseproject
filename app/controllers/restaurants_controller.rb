@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
  
-    before_action :set_restaurant, only: [:show, :edit, :update]
+    before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
   
     def index
       @restaurants = current_user.restaurants
@@ -23,6 +23,7 @@ class RestaurantsController < ApplicationController
     end
   
     def edit
+      render partial: "form"
     end
   
     def update
@@ -43,7 +44,7 @@ class RestaurantsController < ApplicationController
         params.require(:restaurant).permit(:name, :specials)
       end
 
-      def set_account
+      def set_restaurant
         @restaurant = current_user.restaurants.find(params[:id])
       end
   

@@ -1,2 +1,11 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<br />
+<br />
+<h4 ><%= @restaurant.name %><br /> <br /> <%=@restaurant.specials%></h4>
+
+<br />
+
+<%= link_to "Back", :back %>
+
+ <%= link_to 'Edit Restaurant', edit_restaurant_path(@restaurant) %>
+
+  <%= link_to 'Delete Restaurant', @restaurant, method: :delete %><
